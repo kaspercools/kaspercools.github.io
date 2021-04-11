@@ -1,0 +1,12 @@
+<h1 class="page-title">
+    <div class="page-title__text">{{ page.title }}</div>
+    <div class="page-title__subtitle">{{ page.subtitle }}</div>
+    <div class="tags">
+        {% assign sortedCategories = page.categories %}
+        {% for category in sortedCategories %}
+        <span class="tag">
+            <a href="/category/{{category}}">#{{ category }}</a>
+        </span>
+        {% endfor %}
+    </div>
+</h1>
